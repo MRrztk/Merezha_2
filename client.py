@@ -49,8 +49,7 @@ try:
         elif msg.lower() == '/private':
             sio.emit("users", 'start')
             continue
-
-        elif msg.lower() == "":
+        elif msg.lower() == "wew":
             sio.emit('sergunchik')
             continue
 
