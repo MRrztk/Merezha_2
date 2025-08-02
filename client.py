@@ -1,6 +1,6 @@
 import socketio
 
-RENDER_SERVER_URL = 'https://merezha-2.onrender.com'
+RENDER_SERVER_URL = 'https://merezha-2-vd0s.onrender.com'
 USERNAME = input("Придумай собі прізвисько =)\n ")
 
 sio = socketio.Client()
@@ -49,6 +49,11 @@ try:
         elif msg.lower() == '/private':
             sio.emit("users", 'start')
             continue
+
+        elif msg.lower() == "":
+            sio.emit('sergunchik')
+            continue
+
 
         # Handle private message after receiving client list
         if private_message_clients:
